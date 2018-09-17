@@ -8,15 +8,18 @@ def play_rhyme(number_of_monkeys)
 
   phonic = ["He", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
   number = number_of_monkeys
+  second_passage = "He"
   final_passage = "No more monkeys jumping on the bed!"
   
+  
   if number > 1
+    second_passage = "One"
     final_passage = "Get those monkeys right to bed!"
   end
 
   puts (
     "\n#{phonic[number]} little monkeys jumping on the bed," + "\n" +
-    "One fell off and bumped his head," + "\n" +
+    "#{second_passage} fell off and bumped his head," + "\n" +
     "Mama called the doctor and the doctor said," + "\n" +
     "#{final_passage}"
   )
@@ -25,4 +28,4 @@ def play_rhyme(number_of_monkeys)
   play_rhyme((number - 1))
 end
 
-play_rhyme(10)
+play_rhyme(4)
